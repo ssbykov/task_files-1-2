@@ -31,7 +31,8 @@ def get_shop_list_by_dishes(dishes, person_count):
             if ingridiente['ingredient_name'] in dict_get_shop:
                 dict_get_shop[ingridiente['ingredient_name']]['quantity'] += ingridiente['quantity'] * person_count
             else:
-                dict_get_shop[ingridiente['ingredient_name']] = {'measure': ingridiente['measure'], 'quantity': ingridiente['quantity'] * person_count}
+                dict_get_shop[ingridiente['ingredient_name']] = {'measure': ingridiente['measure'], \
+                    'quantity': ingridiente['quantity'] * person_count}
     print(dict_get_shop)
 
 get_shop_list_by_dishes(['Фахитос', 'Омлет'], 2)   
